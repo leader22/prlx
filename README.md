@@ -17,4 +17,6 @@ prlx.on('scroll', function(ev) {
     var posY = ev.data.y;
     // do something.
 });
+
+prlx.start();
 ```
