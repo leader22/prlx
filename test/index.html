@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+      p {
+          position: relative;
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+      }
+      .b1 { background-color: red; }
+      .b2 { background-color: orange; }
+      .b3 { background-color: pink; }
+  </style>
+</head>
+<body>
+<div style="height:3000px;">
+    <p id="b1" class="b1"></p>
+    <p id="b2" class="b2"></p>
+    <p id="b3" class="b3"></p>
+</div>
+
+<script src="../src/prlx.js"></script>
+<script>
+var b1 = document.getElementById('b1');
+var b2 = document.getElementById('b2');
+var b3 = document.getElementById('b3');
+var scrollHandler = function(pos) {
+    b1.style.transform = 'translate3d(' + (pos.y / 1) + 'px, ' + (pos.y * 1) + 'px, 0)';
+    b2.style.transform = 'translate3d(' + (pos.y / 2) + 'px, ' + (pos.y * 2) + 'px, 0)';
+    b3.style.transform = 'translate3d(' + (pos.y / 3) + 'px, ' + (pos.y * 3) + 'px, 0)';
+};
+
+window.addEventListener('scroll', function() {
+    scrollHandler({ y: window.scrollY });
+});
+
+// var prlx = new Prlx({ raf: true });
+// prlx.onScroll(scrollHandler);
+// prlx.start();
+</script>
+</body>
+</html>
