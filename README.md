@@ -3,20 +3,24 @@ Safe way to parallax your site!
 
 
 ```javascript
-// Worse
+// これを
 window.addEventListener('scroll', function() {
     var posY = window.scrollY;
     // do something.
 }, false);
 
-// Better
+// こうしようという試み
 var prlx = new Prlx({ raf: true });
 // var prlx = new Prlx({ fps: 30 });
 
-prlx.on('scroll', function(ev) {
-    var posY = ev.data.y;
+prlx.onScroll(function(pos) {
+    var posY = pos.y;
     // do something.
 });
 
+// スタートするまで何もしないよ
 prlx.start();
+
+// いらなくなったら
+prlx.dispose();
 ```
