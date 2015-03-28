@@ -1,0 +1,29 @@
+{
+  "name": "prlx",
+  "version": "1.0.0",
+  "description": "Safe way to parallax your site!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-header": "^1.2.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leader22/prlx.git"
+  },
+  "author": "leader22",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leader22/prlx/issues"
+  },
+  "homepage": "https://github.com/leader22/prlx"
+}
