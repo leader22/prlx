@@ -22,7 +22,7 @@
     <p id="b3" class="b3"></p>
 </div>
 
-<script src="../src/prlx.js"></script>
+<script src="../dist/prlx.min.js"></script>
 <script>
 var b1 = document.getElementById('b1');
 var b2 = document.getElementById('b2');
@@ -33,13 +33,13 @@ var scrollHandler = function(pos) {
     b3.style.transform = 'translate3d(' + (pos.y / 3) + 'px, ' + (pos.y * 3) + 'px, 0)';
 };
 
-window.addEventListener('scroll', function() {
-    scrollHandler({ y: window.scrollY });
-});
+// window.addEventListener('scroll', function() {
+//     scrollHandler({ y: window.scrollY });
+// });
 
-// var prlx = new Prlx({ raf: true });
-// prlx.onScroll(scrollHandler);
-// prlx.start();
+var prlx = new Prlx({ raf: true });
+prlx.onScroll(scrollHandler);
+prlx.start();
 </script>
 </body>
 </html>
