@@ -1,7 +1,7 @@
 # prlx
 Safe way to parallax your site!
 
-See
+See https://leader22.github.io/prlx/index.html?win=0
 
 
 ```javascript
