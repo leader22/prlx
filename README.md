@@ -1,7 +1,7 @@
 # prlx
 Safe way to parallax your site!
 
-[Demo](http://labs.lealog.net/prlx/?win=0)
+See
 
 
 ```javascript

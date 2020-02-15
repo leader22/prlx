@@ -22,24 +22,29 @@
     <p id="b3" class="b3"></p>
 </div>
 
-<script src="../dist/prlx.min.js"></script>
+<script src="./prlx.min.js"></script>
 <script>
 var b1 = document.getElementById('b1');
 var b2 = document.getElementById('b2');
 var b3 = document.getElementById('b3');
 var scrollHandler = function(pos) {
-    b1.style.transform = 'translate3d(' + (pos.y / 1) + 'px, ' + (pos.y * 1) + 'px, 0)';
-    b2.style.transform = 'translate3d(' + (pos.y / 2) + 'px, ' + (pos.y * 2) + 'px, 0)';
-    b3.style.transform = 'translate3d(' + (pos.y / 3) + 'px, ' + (pos.y * 3) + 'px, 0)';
+    b1.style.webkitTransform = b1.style.transform = 'translate3d(' + (pos.y / 1) + 'px, ' + (pos.y * 1) + 'px, 0)';
+    b2.style.webkitTransform = b2.style.transform = 'translate3d(' + (pos.y / 2) + 'px, ' + (pos.y * 2) + 'px, 0)';
+    b3.style.webkitTransform = b3.style.transform = 'translate3d(' + (pos.y / 3) + 'px, ' + (pos.y * 3) + 'px, 0)';
 };
 
-// window.addEventListener('scroll', function() {
-//     scrollHandler({ y: window.scrollY });
-// });
-
+if (location.search === '?win=1') {
+console.log('by onscroll');
+window.addEventListener('scroll', function() {
+    scrollHandler({ y: window.scrollY });
+});
+}
+else {
+console.log('by prlx');
 var prlx = new Prlx({ raf: true });
 prlx.onScroll(scrollHandler);
 prlx.start();
+}
 </script>
 </body>
 </html>
